@@ -1,0 +1,387 @@
+html {
+    font-size: 100px;
+}
+
+body {
+    background: #f6f6f6;
+}
+
+/*header*/
+header {
+    height: .67rem;
+    width: 100%;
+    background: #f54343;
+    padding-top: .21rem;
+}
+
+header .logo {
+    width: 2.2rem;
+    height: .46rem;
+    margin-left: .19rem;
+}
+
+header .logo img {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+/*nav*/
+nav {
+    overflow: hidden;
+    overflow-x: scroll;
+    position: relative;
+    /*先让x，y轴都隐藏起来，x轴在出现滚动条*/
+}
+
+nav::-webkit-scrollbar {
+    /*css3 ::-webkit-scrollbar处理滚动条整体部分，把滚动条隐藏起来*/
+    display: none;
+}
+
+nav .bg {
+    width: .7rem;
+    height: .8rem;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background:linear-gradient(90deg,transparent,#efeded,#f6f6f6,#fff);
+}
+
+.menu-list {
+    font-size: 0; /*为了解决display:inline-block 多出几像素的空白*/
+    white-space: nowrap; /*强制不换行*/
+}
+
+.menu-list .menu-list-link {
+    display: inline-block;
+    width: 16.66%;
+    height: .75rem;
+    line-height: .75rem;
+    font-size: .34rem;
+    text-align: center;
+    color: #6b7989;
+    border-bottom: .05rem solid #fff;
+}
+
+.menu-list .menu-list-link.cur {
+    color: #f54343;
+    border-bottom: .05rem solid #f54343;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+}
+
+.swiper-slide {
+    position: relative;
+}
+
+.swiper-slide .text {
+    width: 100%;
+    color: #ffffff;
+    font-size: .32rem;
+    height: .6rem;
+    line-height: .6rem;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    padding: 0 .18rem;
+/ / 左右padding值算到总宽度100 % 中 -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    z-index: 10;
+
+}
+
+.swiper-slide .text em {
+    font-style: normal;
+    background: #f54343;
+    padding: 0 .1rem;
+    margin-right: .1rem;
+}
+
+.swiper-slide .bg {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: .6rem;
+    background: rgba(0, 0, 0, .56);
+}
+
+/*channel*/
+.channelBox li {
+    float: left;
+    width: 50%;
+    background: #fff;
+    padding: .21rem 0 .16rem;
+    border-right: 0.04rem solid #f6f6f6;
+    /*把 border padding 都算在总的宽度*/
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.channelBox li:last-child {
+    border: 0;
+}
+
+.channelBox li img {
+    display: block;
+    width: 1.31rem;
+    height: 0.81rem;
+    margin: 0 auto;
+}
+
+/*main*/
+.main {
+    padding: 0 .18rem;
+    background: #fff;
+    overflow: hidden;
+    margin-top: .2rem;
+}
+
+.itma {
+    padding-top: .2rem;
+}
+
+.item {
+    border-bottom: 1px solid #f6f6f6;
+    padding-bottom: .2rem;
+    margin-bottom: .2rem;
+    overflow: hidden;
+}
+
+.item .i-pic {
+    float: left;
+    width: 2.63rem;
+    height: 1.48rem;
+}
+
+.item .i-pic img {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.item .i-thumb {
+    float: right;
+    width: 4.25rem;
+    position: relative;
+    height: 1.48rem;
+}
+
+.item .i-thumb .i-title, .i-item .i-thumb .i-title {
+    font-size: .34rem;
+    line-height: .4rem;
+    height: .8rem;
+    overflow: hidden;
+}
+
+.item .i-thumb .i-title a, .i-item .i-thumb .i-title a {
+    color: #363636;
+}
+
+.item .i-thumb .i-meta {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    color: #a6a6a6;
+    font-size: .28rem;
+}
+
+.item .i-thumb .i-label {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 0 .1rem;
+    font-size: .22rem;
+    color: #f54343;
+    border: 1px solid #f54343;
+    border-radius: .04rem;
+
+}
+
+.item:last-child {
+    border-bottom: none;
+}
+
+/*绝对现场*/
+.titleBox {
+    height: 1.02rem;
+    line-height: 1.02rem;
+    font-size: .36rem;
+    color: #000000;
+
+}
+
+.titleBox h2 {
+    font-size: .36rem;
+    font-weight: normal;
+}
+
+.titleBox .i-link {
+    float: right;
+    color: #9f9f9f;
+    font-size: .28rem;
+    font-weight: normal;
+}
+
+.wrap {
+    /*让父元素的整体往左移*/
+    margin-left: -.18rem;
+    overflow: hidden;
+}
+
+.i-item {
+    width: 50%;
+    float: left;
+    padding-left: .18rem;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin-bottom: .3rem;
+}
+
+.i-item .i-pic {
+    width: 3.48rem;
+    height: 1.96rem;
+}
+
+.i-item .i-pic img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.i-item .i-thumb .i-title {
+    margin: .2rem 0;
+}
+
+.i-item .i-thumb .i-des {
+    font-size: .24rem;
+    color: #a6a6a6;
+}
+
+.i-item .i-thumb .i-time {
+    float: left;
+}
+
+.i-item .i-thumb .i-time em, .i-item .i-thumb .i-num em {
+    /*小图标公用样式*/
+    display: inline-block;
+    width: .23rem;
+    height: .22rem;
+    margin-right: .06rem;
+    vertical-align: middle;
+}
+
+.i-item .i-thumb .i-time em {
+    background: url("../images/i-con.png") no-repeat;
+    /*cover 覆盖（充满）容器的尺寸（宽度和高度）*/
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+
+.i-item .i-thumb .i-num {
+    float: left;
+    margin-left: .3rem;
+}
+
+.i-item .i-thumb .i-num em {
+    background: url("../images/i-con1.png") no-repeat;
+    /*cover 覆盖（充满）容器的尺寸（宽度和高度）*/
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+
+.i-labell {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 0 .1rem;
+    font-size: .22rem;
+    color: #167eff;
+    border: 1px solid #167eff;
+    border-radius: .04rem;
+}
+
+/*footer*/
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    height: .97rem;
+    width: 100%;
+    border-top: .01rem solid #c3c3c3;
+    background: #fff;
+    overflow: hidden;
+}
+
+footer li {
+    width: 20%;
+    float: left;
+    text-align: center;
+    font-size: .24rem;
+
+}
+
+footer li span {
+    display: block;
+    width: .43rem;
+    height: .42rem;
+    background: url("../images/sprits.png") no-repeat;
+    /*background-size:雪碧图的宽度 雪碧图的高度;不能用cover*/
+    -webkit-background-size: 2.15rem .84rem;
+    background-size: 2.15rem .84rem;
+    margin: 0.1rem auto .06rem;
+}
+
+footer li.cur {
+    color: #f54343;
+}
+
+footer li span.icon-home {
+    background-position: 0 0;
+}
+
+footer li.cur span.icon-home {
+    background-position: 0 -.42rem;
+}
+
+footer li span.icon-live {
+    background-position: -.43rem 0;
+}
+
+footer li.cur span.icon-live {
+    background-position: -.43rem -.42rem;
+}
+
+footer li span.icon-column {
+    width: .42rem;
+    background-position: -.86rem 0;
+}
+
+footer li.cur span.icon-column {
+    background-position: -.86rem -.42rem;
+}
+
+footer li span.icon-doc {
+    background-position: -1.29rem 0;
+}
+
+footer li.cur span.icon-doc {
+    background-position: -1.29rem -.42rem;
+}
+
+footer li span.icon-me {
+    background-position: -1.72rem 0;
+}
+
+footer li.cur span.icon-me {
+    background-position: -1.72rem -.42rem;
+}
+
+
+
+
+
